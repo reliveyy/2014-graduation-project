@@ -1,0 +1,11 @@
+.DS_Store
+gradle
+gradlew
+gradlew.bat
+*.iml
+.gradle
+.idea
+target
+.project
+.classpath
+.settings

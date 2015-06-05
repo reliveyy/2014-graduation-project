@@ -1,0 +1,134 @@
+@nav-width: 240px;
+@nav-avatar-border-width: 1px;
+@nav-avatar-size: @nav-width * 0.5 + @nav-avatar-border-width * 2;
+@nav-bg-color: #262626;
+@nav-font-color: #acacac;
+@nav-avatar-border-color: darken(@nav-bg-color, 0.5%);
+
+//@import url(http://fonts.googleapis.com/css?family=Lobster);
+//@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+.box-shadow (@string) {
+  -webkit-box-shadow: @string;
+  -moz-box-shadow: @string;
+  box-shadow: @string;
+}
+
+.border-radius(@radius) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
+body {
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif /*rtl:prepend:"Droid Arabic Kufi","Droid Sans", */;
+}
+
+#nav {
+  z-index: 1000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: @nav-width;
+  background: @nav-bg-color;
+  font-family: 'Oswald', sans-serif;
+}
+
+#avatar {
+  margin: @nav-avatar-border-width;
+  width: @nav-width * 0.5;
+  height: @nav-width * 0.5;
+  border-radius: 50%;
+}
+
+#avatar-cover {
+  border-radius: 50%;
+  background: radial-gradient(fade(@nav-avatar-border-color, 10%) 61%, @nav-avatar-border-color 68%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  &:hover {
+    background: radial-gradient(fade(@nav-avatar-border-color, 0%) 61%, @nav-avatar-border-color 68%);
+  }
+}
+
+#avatar-wrapper {
+  position: relative;
+  width: @nav-avatar-size;
+  height: @nav-avatar-size;
+  margin: auto;
+}
+
+#avatar-box {
+  padding-top: (@nav-width - @nav-avatar-size) * 0.4;
+  padding-bottom: (@nav-width - @nav-avatar-size) * 0.2;
+  text-align: center;
+}
+
+#avatar_menu {
+
+}
+
+#avatar_menu a {
+  display: block;
+  font-size: small;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.3);
+  width: 70%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 15px 0px;
+  margin-top: 10px;
+  .box-shadow(inset 0px 0px 9px 1px rgba(0, 0, 0, 0.3));
+}
+
+/* Function List */
+#nav a {
+  text-decoration: none;
+  color: @nav-font-color;
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+#nav ul {
+  //border: 1px solid red;
+  list-style-type: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 1.3em;
+}
+
+#nav ul li {
+  padding-top: 12px;
+  padding-bottom: 11px;
+  border-top: 1px solid lighten(@nav-bg-color, 7%);
+  border-bottom: 1px solid darken(@nav-bg-color, 7%);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#nav ul li:last-child {
+  border-bottom: 0px;
+}
+
+#nav ul li:first-child {
+  border-top: 0px;
+}
+
+#main{
+  position: absolute;
+  left: @nav-width;
+  top: 0;
+  height: 100%;
+  min-width: 960px;
+}
+
+
+

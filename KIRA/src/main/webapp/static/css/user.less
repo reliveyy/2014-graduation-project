@@ -1,0 +1,110 @@
+@light_bg: rgba(244, 244, 244, 0.8);
+@dark_bg: rgba(230, 230, 230, 0.8);
+@header_bg: rgba(175, 175, 175, 0.8);
+@table_border_color: rgba(217, 217, 217, 0.80);
+@pager_border_color:rgba(100,100,100,0.8);
+
+body {
+  padding: 30px;
+  font-family: Georgia;
+  color: #1a1a1a;
+  background: url(/res/img/bg.jpg);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid @table_border_color;
+  background: @light_bg;
+  padding: 5px 15px;
+}
+
+th {
+  border: 1px solid @table_border_color;
+  background: @header_bg;
+  padding: 5px 15px;
+
+}
+#pager{
+  font-size: small;
+  display: flex;
+  box-align:baseline;
+}
+#pager .link{
+  padding: 2px;
+  display: inline-block;
+  min-width: 20px;
+  text-align: center;
+  border: 1px solid @pager_border_color;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 1px;
+  margin-left: 1px;
+  padding: 2px;
+}
+#pager .current{
+  padding: 2px;
+  display: inline-block;
+  min-width: 20px;
+  text-align: center;
+  border: 1px solid @pager_border_color;
+  background: @header_bg;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 1px;
+  margin-left: 1px;
+  padding: 2px;
+}
+#pager .text{
+  display: inline-block;
+  min-width: 20px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 1px;
+  margin-left: 1px;
+}
+.label{
+  font-family: courier;
+  display: inline-block;
+  margin: 3px;
+  padding: 3px 10px;
+  border-radius: 5px;
+  border: 1px solid teal;
+  background: rgba(0, 128, 128, 0.3);
+  color: #000;
+  font-size: small;
+}
+.operator{
+  font-family: courier;
+  display: inline-block;
+  margin: 3px;
+  padding: 3px 10px;
+  border-radius: 5px;
+  border: 1px solid green;
+  background: rgba(0, 128, 0, 0.3);
+  color: #000;
+  font-size: small;
+}
+.expression{
+  font-family: courier;
+  display: inline-block;
+  margin: 3px;
+  padding: 3px 10px;
+  border-radius: 5px;
+  border: 1px solid cadetblue;
+  background: rgba(95, 158, 160, 0.3);
+  color: #000;
+  font-size: small;
+}
+.and{
+  display: inline-block;
+  border: 1px solid @header_bg;
+  margin-left: 40px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-right: 2px;
+  padding: 3px;
+}
